@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playpen+Sans:wght@500&family=Poppins&family=Ubuntu&family=Ubuntu+Mono&display=swap');
+
+body{
+  min-height: 100vh;
+  font-family: poppins;
+}
+
+.btn-add-cart{
+  font-size: 18px;
+  padding: 6px 40px;
+  border:none;
+  border-radius: 20px;
+  background: rgba(255, 216, 20, 0.758);
+  cursor: pointer;
+}

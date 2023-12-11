@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playpen+Sans:wght@500&family=Poppins&family=Ubuntu&family=Ubuntu+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.box {
+  border: 4px solid gray;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px 10px rgba(255, 255, 255, 0.159);
+}
+
+
+.display-time {
+  font-size: 40px;
+  margin-top: 116px;
+  margin-left: 64px;
+  color: #fff;
+}
+
+.btn{
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.play-btn, .reset-btn{
+  font-size: 20px;
+  padding: 4px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.play-btn:hover, .reset-btn:hover{
+  background-color: rgba(255, 255, 255, 0.937);
+}
+
+.blink{
+  animation: blink 0.7s infinite ;
+}
+
+@keyframes blink {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+  
+}

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playpen+Sans:wght@500&family=Poppins&family=Ubuntu&family=Ubuntu+Mono&display=swap');
+
+
+body{
+  background-color: aliceblue;
+  font-family: poppins;
+}
+
+.main-box{
+  margin-bottom: 10px;
+}
+
+.grid,.main-box{
+  display: grid;
+  grid-template-columns: 246px 167px 110.4px;
+  align-items: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.title{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.todo-input{
+  padding: 10px 12px;
+  font-size: 17px;
+}
+
+.todo-input-date{
+  padding: 8px 10px;
+  font-size: 17px;
+}
+
+.add-button{
+  padding: 11px 40px;
+  background: rgb(6, 186, 15);
+  border:none;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.delete-btn{
+  padding: 11px 40px;
+  background: rgb(186, 33, 6);
+  border:none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}

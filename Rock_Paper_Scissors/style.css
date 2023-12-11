@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playpen+Sans:wght@500&family=Poppins&family=Ubuntu&family=Ubuntu+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body {
+  background: #000000d5;
+  color: white;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.emoji {
+  height: 50px;
+}
+
+.game-btn {
+  background: transparent;
+  border: 3px solid #fff;
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.choosen img {
+  height: 50px
+}
+
+.choosen {
+  font-size: 13px;
+}
+
+.score {
+  margin-top: 30px;
+}
+
+.reset-btn,.auto-stop-btn,.yes-btn,.no-btn {
+  background: #fff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 7px;
+  font-size: 16px;
+  cursor: pointer;
+}
