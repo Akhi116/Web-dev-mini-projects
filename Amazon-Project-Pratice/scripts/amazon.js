@@ -1,4 +1,5 @@
-import {cart} from '../data/cart.js';
+import { cart } from '../data/cart.js';
+import { products } from '../data/products.js';
 
 let productsHTML = '';
 
@@ -107,16 +108,16 @@ document.querySelectorAll('.js-add-to-cart')
       addedmessage.classList.add('added-to-cart-onclick');
 
       const prevTimeoutId = addedMessageTimeouts[productId];
-      if(prevTimeoutId){
+      if (prevTimeoutId) {
         clearTimeout(prevTimeoutId);
       }
 
-    const timeoutId = setTimeout(()=> {
-      addedmessage.classList.remove('added-to-cart-onclick');
-    },2000)
+      const timeoutId = setTimeout(() => {
+        addedmessage.classList.remove('added-to-cart-onclick');
+      }, 2000)
 
-    addedMessageTimeouts[productId] = timeoutId;
-     
+      addedMessageTimeouts[productId] = timeoutId;
+
     });
 
 
