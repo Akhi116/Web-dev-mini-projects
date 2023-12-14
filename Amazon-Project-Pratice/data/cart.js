@@ -50,7 +50,7 @@ export function updateQuantity(productId, newQuantity) {
        matchingItem = cartItem;
     }
   });
-  
+
   matchingItem.quantity = newQuantity;
 
   saveToStorage();
@@ -79,6 +79,21 @@ export function removeFromCart(productId) {
   })
 
   cart = newCart;
+
+  saveToStorage();
+}
+
+
+export function updateDeliveryOption(productId, deliveryOptionId) {
+  let matchingItem;
+
+  cart.forEach((item) => {
+    if (productId === item.productId) {
+      matchingItem = item;
+    }
+  });
+
+  matchingItem.deliveryOptionId = deliveryOptionId;
 
   saveToStorage();
 }
