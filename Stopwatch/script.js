@@ -15,7 +15,8 @@ const isClass = document.querySelector('.js-time');
 
 function startCount() {
   if (!isCounting) {
-    intervalId = setInterval(updateStopWatch, 1);
+    clearInterval(intervalId);
+    intervalId = setInterval(updateStopWatch, 10);
     buttonElem.innerHTML = `Stop`;
     if(!isClass.classList.contains('.blink')){
       isClass.classList.remove('blink');
@@ -32,11 +33,11 @@ function startCount() {
 }
 
 function updateStopWatch() {
-  stopWatch.milliSeconds+=1;
-  if (stopWatch.milliSeconds >= 100) {
+  stopWatch.milliSeconds++;
+  if (stopWatch.milliSeconds > 99) {
     stopWatch.milliSeconds = 0;
     stopWatch.seconds++;
-    if (stopWatch.seconds === 60) {
+    if (stopWatch.seconds > 58) {
       stopWatch.seconds = 0;
       stopWatch.minutes++;
     }
