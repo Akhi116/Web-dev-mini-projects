@@ -4,6 +4,8 @@ import { formatCurrency } from '../utils/money.js'; // Named Export having {}
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'; //default export only one thing from a file
 import { deliveryOptions,getDeliveryOption } from '../../data/deliveryOptions.js';
 import { renderPaymentSummary } from "./paymentSummary.js";
+import { renderCheckoutHeader } from "./checkoutHeader.js";
+
 
 
 
@@ -113,8 +115,7 @@ export function renderOrderSummary() {
   function updateCartQuantity() {
     const cartQuantity = calculateCartQuantity();
 
-    document.querySelector('.js-cart-total-quantity')
-      .innerHTML = `${cartQuantity} items`;
+    renderCheckoutHeader();
   }
 
 
@@ -153,7 +154,7 @@ export function renderOrderSummary() {
         const quantityLabel = document.querySelector(`.js-quantity-label-${productId}`);
 
         quantityLabel.innerHTML = newQuantity;
-
+        renderPaymentSummary();
         updateCartQuantity();
       });
 
@@ -169,7 +170,9 @@ export function renderOrderSummary() {
         const container = document.querySelector(`.js-cart-item-container-${productId}`);
         
         container.remove();
-        
+
+        renderCheckoutHeader();
+        renderOrderSummary();
         renderPaymentSummary();
       });
     });

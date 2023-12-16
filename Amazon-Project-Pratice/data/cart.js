@@ -47,7 +47,7 @@ export function updateQuantity(productId, newQuantity) {
 
   cart.forEach((cartItem) => {
     if (cartItem.productId === productId) {
-       matchingItem = cartItem;
+      matchingItem = cartItem;
     }
   });
 
@@ -66,7 +66,6 @@ export function calculateCartQuantity() {
 
 
   return cartQuantity;
-
 }
 
 export function removeFromCart(productId) {
