@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-box{
+  width: 100%;
+  min-height: 100vh;
+  background: #d55656;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-box h2{
+  letter-spacing: 0.6px;
+}
+
+.top{
+  margin: 15px;
+}
+
+.top .recaptcha{
+  font-size: 16px;
+  color: #f5f5f5;
+}
+
+.middle .input-area{
+  width: 140px;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  font-size: 17px;
+  padding: 2px 4px;
+}
+
+.input-area::placeholder{
+  font-size: 14px;
+  opacity: 0.38;
+}
+
+.middle{
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.middle .check{
+  border: 1px solid #fff;
+  border-radius: 2px;
+  font-size: 13px;
+  padding: 3px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.check:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+
+.bottom{
+  margin: 20px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result{
+  font-size: 16px;
+  color: whitesmoke
+}
+
+.refresh{
+  color: #0641ae;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.2s ease;;
+}
+
+.refresh:active{
+  text-decoration: none;
+  color: rgb(0, 102, 255);
+}

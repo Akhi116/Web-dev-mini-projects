@@ -43,7 +43,6 @@ function addToArray() {
   const dueDate = dateElement.value;
 
   todo.push({ name, dueDate }); // same as name:name, dueDate : dueDate as they have same names
-  console.log(todo);
 
   inputElem.value = '';
   dateElement.value = '';
