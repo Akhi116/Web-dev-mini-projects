@@ -18,6 +18,8 @@ async function getWeather() {
     const response = await fetch(apiUrl);
     const data = await response.json();
 
+    console.log(data);
+
     if (response.ok) {
       displayWeather(data);
     } else {
@@ -34,13 +36,33 @@ function displayWeather(data) {
   const weatherInfo = document.querySelector('.js-result');
   const temperature = data.main.temp;
   const description = data.weather[0].description;
+  const img = data.weather[0].main;
   const name = data.name;
+  const humidity = data.main.humidity;
   const wind = data.wind.speed;
 
-  const html = `<p>${temperature} &deg;C</p>
-  <p>${name}</p>
-  <p>${description}</p>
-  <p>Wind Speed: ${wind} km/hr</p>`;
+  const html = `<div class="image">
+  <img src="images/${img}.png">
+</div>
+<div class="main-result">
+  <p class="temp">${temperature}&deg;C</p>
+  <div class="name">
+    <p class="city-name">${name}</p>
+    <p class="description">${description}</p>
+  </div>
+  
+  <div class="humi-wind">
+    <div class="flex">
+      <img src="images/humidity.png" class="img">
+      <p>Humidity: ${humidity}</p>
+    </div>
+    <div class="flex">
+      <img src="images/wind.png" class="img">
+      <p>Wind Speed: ${wind} km/hr</p>
+    </div>
+    
+  </div>
+</div>`;
 
   weatherInfo.innerHTML = html;
 }
