@@ -1,14 +1,14 @@
-const apiKey = '80ef0d068cc5bc230b06fbd3257d09bf';
+const apiKey = "80ef0d068cc5bc230b06fbd3257d09bf";
 
-const getBtn = document.querySelector('.js-btn');
-const result = document.querySelector('.js-result');
+const getBtn = document.querySelector(".js-btn");
+const result = document.querySelector(".js-result");
 
 async function getWeather() {
-  const inputValue = document.querySelector('.js-input');
+  const inputValue = document.querySelector(".js-input");
   const cityName = inputValue.value;
 
   if (!cityName) {
-    alert('Please enter a city name.');
+    alert("Please enter a city name.");
     return;
   }
 
@@ -25,15 +25,14 @@ async function getWeather() {
     } else {
       alert(`Error: ${data.message}`);
     }
-  }
-  catch (error) {
-    console.error('Error fetching weather data:', error);
-    alert('Unable to fetch weather data. Please try again later.');
+  } catch (error) {
+    console.error("Error fetching weather data:", error);
+    alert("Unable to fetch weather data. Please try again later.");
   }
 }
 
 function displayWeather(data) {
-  const weatherInfo = document.querySelector('.js-result');
+  const weatherInfo = document.querySelector(".js-result");
   const temperature = data.main.temp;
   const description = data.weather[0].description;
   const img = data.weather[0].main;
@@ -67,18 +66,14 @@ function displayWeather(data) {
   weatherInfo.innerHTML = html;
 }
 
-
-getBtn.addEventListener('click', () => {
+getBtn.addEventListener("click", () => {
   getWeather();
-})
+});
 
-const inputValue = document.querySelector('.js-input');
+const inputValue = document.querySelector(".js-input");
 
-inputValue.addEventListener('keydown', event => {
-  if (event.key === 'Enter') {
+inputValue.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
     getWeather();
   }
-})
-
-
-
+});

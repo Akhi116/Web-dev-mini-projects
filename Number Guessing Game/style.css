@@ -1,91 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Silkscreen&family=Sixtyfour&family=Pixelify+Sans&&family=Poor+Story&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --main-color: rgb(1, 71, 97);
+  --head: rgb(95, 91, 91);
+  --color: whitesmoke;
 }
 
 .main-box {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(0, 0, 0);
-  flex-direction: column;
+  background: var(--main-color);
+  min-height: 100vh;
+  position: relative;
 }
 
 .title {
-  color: white;
-}
-
-.input-area {
-  width: 500px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 50px;
-  margin: 20px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.126);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.36);
-  transition: all 0.2s ease;
+  background: var(--head);
+  padding: 5%;
+  text-align: center;
+  font-family: "Silkscreen";
+  color: rgba(8, 244, 173, 0.888);
 }
 
 .start-btn {
-  width: 150px;
-  padding: 10px 0;
-  font-size: 1rem;
+  position: absolute;
+  font-size: 22px;
+  font-family: Bungee;
+  padding: 1rem 2rem;
+  top: 0;
+  left: 0;
+  border: 1px solid grey;
+  outline: none;
   cursor: pointer;
-  border: 1px solid #fff;
+  transition: all 0.1s;
+}
+
+.input-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player-input {
+  position: absolute;
+  font-family: "Bungee";
+  top: 9rem;
+  text-align: center;
+  width: 4em;
+  height: 2em;
+  z-index: 100;
+  outline: none;
+  border: 1px solid;
   border-radius: 7px;
-  background: #fdfdfd;
-  transition: all 0.2s ease;
+  background: #c6315c;
+  color: var(--color);
+  font-size: 70px;
+  caret-color: #ef7296;
+}
+
+.player-input:active {
+  border: 4px #ef7296;
+}
+
+.instruction {
+  position: absolute;
+  top: 23rem;
+  font-family: "Poor Story";
+  font-size: 3rem;
+  color: #ffbc02;
+}
+
+.reset-btn {
+  position: absolute;
+  font-size: 22px;
+  font-family: "Bungee";
+  padding: 1rem 2rem;
+  top: 0;
+  right: 0;
+  border: 1px solid grey;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.1s;
 }
 
 .start-btn:hover,
 .reset-btn:hover {
-  background-color: #000;
-  color: #fff;
+  color: white;
+  background-color: black;
 }
 
-.instruction,
 .result {
-  color: #fff;
-  font-size: 17px;
-
+  position: absolute;
+  text-align: center;
+  top: 32rem;
+  font-family: "Sixtyfour";
+  font-size: 1.6rem;
 }
 
-.player-input {
-  width: 60px;
-  padding: 8px 10px;
-  font-size: 17px;
-  outline: none;
-  border: 1px solid white;
-  border-radius: 6px;
-  caret-color: rgb(90, 160, 221);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.314);
-  transition: border 0.2s ease;
+.score {
+  position: absolute;
+  top: 40rem;
+  font-size: 2.5rem;
+  color: white;
+  font-family: "Silkscreen";
 }
 
-.player-input:focus {
-  border: 1px solid rgb(90, 160, 221);
-}
-
-.visible-input-box {
-  display: none;
-}
-
-.reset-btn {
-  width: 60px;
-  padding: 8px 10px;
-  font-size: 15px;
-  outline: none;
-  border: 1px solid white;
-  border-radius: 6px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.314);
-  cursor: pointer;
-  transition: all 0.2s ease;
+span {
+  color: rgb(243, 255, 6);
 }
