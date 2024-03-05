@@ -81,7 +81,7 @@ body {
   font-size: 18px;
   padding: 12px 30px;
   margin-left: 10px;
-  transition: transfor, 0.2 ease-in-out;
+  transition: transform 0.2 ease-in-out;
 }
 
 .btn:active {
